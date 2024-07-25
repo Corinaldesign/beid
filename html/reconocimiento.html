@@ -1,0 +1,41 @@
+<div class="titulo_principal" page="reconocimiento" backpage="seguridad">
+  <h3>Revisa el estado de los números de atención</h3>
+  <div class="linea_roja"></div>
+</div>
+<div class="camara_container">
+  <video id="video" width="100%" height="240" autoplay playsinline></video>
+  <canvas id="canvas" width="100%" height="240" style="display:none;"></canvas>
+  <button class="bt_foto" id="takephoto" goto="menu_principal">
+    <a >
+      <img class="foto_icon" src="imgs/foto_icon.svg" alt=""/>
+    </a>
+  </button>
+</div>
+<div class="istruccion_foto">
+  <p>Ayúdanos a hacer tu sesión más segura</p>
+</div>
+<div class="bt_container">
+  <button class="whithe_bt" id="gotoinitrecon" goto="inicio">
+    <a>Ir al inicio</a>
+  </button>
+</div>
+
+<script>
+  // Acceder a la cámara del dispositivo
+  var video = document.getElementById('video');
+  var canvas = document.getElementById('canvas');
+  var stream;
+  navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user' } })
+            .then(mediaStream => {
+                stream = mediaStream;
+                video.srcObject = stream;
+                video.play();
+            })
+            .catch(err => {
+                console.error('Error al acceder a la cámara: ', err);
+            });
+
+
+
+
+</script>

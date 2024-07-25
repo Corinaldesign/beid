@@ -1,0 +1,663 @@
+html {
+    /*62.5% of 16px=10px*/
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background: var(--color-fondo);
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --color-fondo: rgb(255, 255, 255);
+    --color-negro_txt: rgb(48, 48, 48);
+    --color-cyan_santander: rgb(19,126, 132);
+    --color-rojo_santander: rgb(236, 0, 0);
+    --color-rojo_oscuro: rgb(204, 0, 0);
+    --color-verde: rgb(13, 177, 126);
+    --color-gris_txt: rgb(170, 170, 170);
+    --color-gris_oscuro: rgb(114, 114, 114);
+    --color-blanco: rgb(255, 255, 255);
+    --color-crema: rgb(211, 207, 204);
+
+    --step--2: clamp(0.7813rem, 0.566rem + 1.0761vi, 1.4rem);
+    --step--1: clamp(0.9375rem, 0.6549rem + 1.413vi, 1.75rem);
+    --step-0: clamp(1.125rem, 0.7554rem + 1.8478vi, 2.1875rem);
+    --step-1: clamp(1.35rem, 0.8685rem + 2.4076vi, 2.7344rem);
+    --step-2: clamp(1.62rem, 0.9946rem + 3.1269vi, 3.418rem);
+    --step-3: clamp(1.944rem, 1.1341rem + 4.0495vi, 4.2725rem);
+    --step-4: clamp(2.3328rem, 1.2866rem + 5.2309vi, 5.3406rem);
+    --step-5: clamp(2.7994rem, 1.4511rem + 6.7415vi, 6.6757rem);
+
+}
+
+  /* Tipografia*/
+
+  @font-face {
+    font-family: 'Santander';
+    src: url('../fonts/Santander_Text/SantanderTextW05-Regular.woff2') format('woff2'),
+         url('../fonts/Santander_Text/SantanderTextW05-Regular.woff') format('woff'),
+         url('../fonts/Santander_Text/SantanderTextW05-Bold.woff2') format('woff2'),
+         url('../fonts/Santander_Text/SantanderTextW05-Bold.woff') format('woff');
+    font-style: normal;
+} 
+
+body {
+    font-family: 'Santander', sans-serif, Arial, Helvetica, sans-serif;
+  }
+  
+  h1,
+  h2 {
+    color: var(--color-negro_txt);
+    margin-top: 0rem;
+    font-weight: bold;
+    font-size: var(--step-4);
+    margin-bottom: 1rem;
+    letter-spacing: 0.2px;
+  }
+  h2>em{
+    font-style: normal;
+    color: var(--color-morado_txt);
+  }
+  
+  h3 {
+    color: var(--color-negro_txt);
+    font-size: var(--step-2);
+    margin-bottom: 1rem;
+  }
+
+  h4 {
+    color: var(--color-negro_txt);
+    font-size: var(--step-1);
+    font-weight: normal;
+  }
+
+  p {
+    font-family: 'Santander'; 
+    color: var(--color-gris_txt);
+    letter-spacing: 0.1px;
+    font-size: var(--step-0);
+    line-height: 1.8;
+    margin-top: 2rem;
+  }
+
+
+/* HEADING MENU NAV*/
+
+ .header{
+      width: 100%;
+      height: 8rem;
+      background: linear-gradient(45deg, var(--color-rojo_santander), var(--color-rojo_oscuro));
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+.logo{
+      width: max(150px);
+    }
+
+  .menu_icon{
+  width: 25px;
+  cursor: pointer;
+  }
+  .menu_icon:hover{
+
+    opacity: 0.7;
+
+  }
+  
+  .bt_ingresar{
+    width: max(120px);
+    height: 30px;
+    cursor: pointer;
+    border: solid 2px;
+    border-color: var(--color-crema);
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: var(--color-rojo_santander);
+    letter-spacing: 0.1px;
+    font-size: var(--step-0);
+  }
+
+  .bt_ingresar:hover{
+    background-color: var(--color-rojo_santander);
+    color: var(--color-blanco);
+  }
+
+  /* contenedor central*/
+  
+  .mid_container{
+    width: 80%;
+    margin-inline: auto;
+}
+
+  .logo_workcafe{
+    width: max(300px);
+    margin-inline: auto;
+  }
+
+  .linea_roja{
+    width: 30px;
+    border-bottom: solid 2px;
+    border-color: var(--color-rojo_santander);
+
+  }
+
+  
+
+  
+    /* Input field*/
+
+    .inputfield{
+      width: 80%;
+      height: 3rem;
+      border: 0;
+      font-size: var(--step-1);
+  
+    }
+
+    .input_container{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 1rem;
+      border: solid 1px;
+      border-radius: 5px;
+      border-color: var(--color-crema);
+      border-bottom: solid 2px rgb(19, 126, 132);
+      outline: 0;
+    }
+
+    ::placeholder{
+      color: var(--color-gris_oscuro);
+      font-size: var(--step-0);
+    }
+
+    .inputfield:focus{
+      outline: none;
+    }
+
+    .ico_user{
+      width: 30px;
+    }
+
+@media(min-width:1024px){
+  .inputfield{
+    width: max(50%);
+    
+  }
+
+  .input_container{
+
+    width: max(50%);
+
+  }
+
+}
+
+ /* Buttons*/
+
+.bt_container{
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+
+
+ .red_bt{
+  width: 100%;
+  padding: 1.2rem 1rem;
+  border-radius: 25px;
+  background-color: var(--color-rojo_santander);
+  border: solid 1px;
+  border-color: var(--color-rojo_oscuro);
+  font-size: var(--step-1);
+  margin-top: 3rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  outline: 0;
+ }
+
+ .red_bt a{
+  color: var(--color-blanco);
+  font-style: normal;
+  text-decoration: none;
+  padding: 1.3rem 2rem;
+  outline: 0;
+ }
+
+ .dis{
+  background-color: var(--color-gris_txt);
+   border-color: var(--color-gris_oscuro);
+
+ }
+
+ .whithe_bt{
+  width: 100%;
+  padding: 1.2rem 1rem;
+  border-radius: 25px;
+  background-color: var(--color-blanco);
+  border: solid 1px;
+  border-color: var(--color-blanco);
+  font-size: var(--step-1);
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  outline: 0;
+ }
+
+ .whithe_bt a{
+  color: var(--color-rojo_santander);
+  font-style: normal;
+  text-decoration: none;
+  padding: 1.3rem 2rem;
+  outline: 0;
+ }
+
+ @media(min-width:1024px){
+  .red_bt{
+    width: max(40%);
+  }
+
+  .mid_container{
+    width: max(50%);
+  }
+}  
+
+
+ /*Menu_principal*/ 
+
+ .menu_item{
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--color-rojo_santander);
+  color: var(--color-blanco);
+  cursor: pointer;
+  text-decoration: none;
+  outline: 0;
+  border-radius: 4px;
+  border: 0;
+  padding-left: 2rem;
+  margin-top: 1rem;
+ }
+
+.menu_item:hover{
+  background-color: var(--color-gris_txt);
+}
+
+ .menu_principal_container{
+  margin-top: 4rem;
+}
+
+ .menu_item h4{
+  color: var(--color-blanco);
+ }
+
+ .ico_menu_principal{
+  width: 4rem;
+
+ }
+
+ @media(min-width:1024px){
+
+  .menu_item{
+    gap: 3rem;
+    margin-top: 2rem;
+    width: 80%;
+ }
+  }
+
+
+
+
+
+
+ /*Número de atención*/
+
+ .Select_numero h3{
+  color: var(--color-rojo_santander);
+  font-weight: 300;
+  text-align: center;
+ }
+
+ .instruccion_numero{
+  width: 80%;
+  margin-inline: auto;
+ }
+
+ .numero_container{
+  width: 100%;
+  border-bottom: solid 1px;
+  border-color: var(--color-crema);
+  box-shadow: 2px 12px 10px 3px rgba(68, 68, 68, 0.1);
+  border-radius: 10px;
+ }
+
+ .numero{
+  width: 90%;
+  height: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  background: linear-gradient(#EC0000, #CC0000);
+  border-radius: 15px;
+  margin-bottom: 2rem;
+ }
+
+ .numero h1{
+  color: var(--color-blanco);
+  font-size: var(--step-5);
+  text-align: center;
+
+ }
+
+ .svg-inline{
+  width: 3rem;
+  fill: var(--color-verde);
+ }
+
+ .ico_verde{
+  width: 30px;
+ }
+
+ .infoNumero{
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+ }
+ .infoNumero p{
+  margin-bottom: 0;
+ }
+
+ .infoNumero h4{
+  margin-top: 4px;
+  font-weight: bold;
+
+ }
+
+ .linegris{
+  width: 1px;
+  height: 4rem;
+  margin-top: 3rem;
+  border-right: solid 1px;
+  border-color: var(--color-crema);
+ }
+ 
+
+ .info_tiempos_container{
+  display: flex;
+  justify-content: space-between;
+
+ }
+
+ @media(min-width:1024px){
+
+  .numero{
+    width: 60%;
+    height: 20rem;
+
+  }
+
+  .info_tiempos_container{
+    margin-top: 4rem;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .ico_verde{
+    width: 40px;
+   }
+
+   .infoNumero{
+    height: 8rem;
+    align-content: center;
+   }
+   .infoNumero h4{
+    margin: 0;
+    font-weight: bold;
+  
+   }
+   .infoNumero p{
+    margin: 0;
+   }
+   .linegris{
+    margin-top: 1rem;
+
+   }
+   
+}
+
+  /*Promo Número*/
+
+  .promo_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: solid 1px;
+    border-radius: 15px;
+    border-color: var(--color-crema);
+    padding: 10px;
+  }
+
+  .img_promo{
+    width: 120px;
+
+  }
+
+  .side_promo h4{
+    margin: 0.5rem;
+
+  }
+
+  .bt_margin{
+    margin-top: 0;
+    padding: 0.5rem;
+  }
+
+ @media(min-width:1024px){
+
+  .bt_margin{
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+  }
+  .promo_container{
+    margin-top: 6rem;
+  }
+
+ }
+
+
+
+/*Llamados*/
+
+ .numero_actual{
+      display: flex;
+      gap: 10px;
+      align-items: center;
+}
+
+  .flecha_llamados{
+    width: 20px;
+}
+
+.numero_actual h3{
+  margin-top: 1rem;
+}
+
+.llamado_anterior{
+  width: 100%;
+  height: 4rem;
+  display: grid;
+  grid-template-columns: 10fr 20fr 10fr 20fr 10fr;
+  align-items: center;
+  margin-bottom: 1rem;
+
+}
+
+.info_tiempos_container{
+
+  border-bottom: solid 1px;
+  border-color: var(--color-crema);
+  
+}
+
+.llamado_anterior h3{
+  margin: 0;
+}
+
+.gris_txt{
+  color: var(--color-gris_txt);
+}
+.msn_contacto{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: var(--color-rojo_santander);
+  border-radius: 15px;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.msn_contacto h4{
+  color: var(--color-blanco);
+}
+
+.msn_contacto h2{
+  color: var(--color-blanco);
+  margin-left: 1.4rem;
+}
+
+@media(min-width:1024px){
+  .llamado_anterior{
+    margin-bottom: 2rem;
+  }
+  .msn_contacto{
+    gap: 34px;
+  }
+
+}
+
+
+
+
+
+    /*Registro Facial*/
+
+.camara_container{
+  width: 100%;
+  height: 35rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: flex-end;
+  background-color: var(--color-negro_txt);
+  border-bottom-right-radius: 25%;
+  border-bottom-left-radius: 25%;
+
+}
+
+.foto_icon{
+  width: 40px;
+}
+
+.bt_foto{
+  width: 100px;
+  height: 100px;
+  margin-bottom: -4rem;
+  margin-inline: auto;
+  text-align: center;
+  background-color: var(--color-rojo_santander);
+  border-radius: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 8px;
+  border-color: var(--color-blanco);
+}
+
+.bt_foto:hover{
+  background-color: var(--color-gris_txt);
+}
+
+.istruccion_foto{
+  width: 100%;
+  margin-top: 5rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+@media(min-width:1024px){
+  .camara_container{
+    height: 65rem;
+
+  }
+
+}
+
+
+
+/*Aviso seguridad*/
+
+
+
+.aviso_seguridad{
+  width: 100%;
+  border: solid 1px;
+  border-radius: 15px;
+  border-color: var(--color-crema);
+  box-shadow: 2px 12px 10px 3px rgba(68, 68, 68, 0.1);
+  padding: 20px;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ico_seguridad{
+  width: 50px;
+  
+}
+
+.aviso_seguridad p{
+
+color: var(--color-gris_oscuro);}
+
+.bt_verde{
+  background-color: var(--color-verde);
+  border-color: var(--color-verde);
+  padding: 1rem;
+}
+
+@media(min-width:1024px){
+
+  .aviso_seguridad p{
+    width: max(80%)
+  }
+
+  .ico_seguridad{
+    width: 90px;
+  }
+
+  .bt_verde{
+    margin-bottom: 4rem;
+  }
+
+}
