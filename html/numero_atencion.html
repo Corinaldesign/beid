@@ -1,38 +1,89 @@
-<div class="titulo_principal" page="numero_atencion" backpage="inicio">
-  <h3>Seleccionaste un número de atención para:</h3>
-  <div class="linea_roja"></div>
-</div>
-<div class="Select_numero"><h3>Caja Cliente Santander</h3></div>
-<div class="numero_container">
-  <div class="instruccion_numero">
-    <h4>Obtén tu número, te avisaremos cuando sea tu turno.</h4>
-  </div>
-  <div class="numero"><h1>A65</h1></div>
-</div>
-<div class="info_tiempos_container">
-  <div class="infoNumero">
-    <p>Usuarios en Fila:</p>
-    <img class="ico_verde" src="imgs/icono_usuario.svg" alt="" />
-    <h4>21</h4>
-  </div>
-  <div class="linegris"></div>
-  <div class="infoNumero">
-    <p>Tiempo de espera:</p>
-    <img class="ico_verde" src="imgs/icono_reloj.svg" alt="" />
-    <h4>18 MIN.</h4>
-  </div>
-</div>
-<div class="bt_container">
-  <button class="red_bt" goto="llamados">
-    <a>Ver llamados</a>
-  </button>
-</div>
-<div class="promo_container">
-<div class="img_promo"><img src="imgs/icono sms.png" alt="mas lucas"></div>
-<div class="side_promo">
-  <h4>¿Quieres que te avisemos antes de tu turno vía SMS?</h4>
-  <button class="red_bt bt_margin" goto="numero_movil">
-    <a>Click aquí</a>
-  </button>
-</div>
-     
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <meta
+      name="description"
+      content="Santander aplicación de agendamiento, Fila virtual."
+    />
+    <meta name="keywords" content="Número de atención, Fila virtual ." />
+    <title>Bienvenido a Work/Café Santander.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;1,400&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <section>
+      <div class="nav_bar">
+        <div class="header">
+          <div class="logo">
+            <a href="../index.html"
+              ><img
+                class="logoSantander"
+                src="../imgs/logoSantander.svg"
+                alt="logo Santander"
+            /></a>
+          </div>
+          <button class="bt_ingresar"><a href="#"></a>Ingresar</button>
+          <div class="menu_bt">
+            <a href="menu_principal.html"
+              ><img
+                class="menu_icon"
+                src="../imgs/volver_icono.svg"
+                alt="botón menú"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="mid_container">
+        <div class="titulo_principal">
+          <h3>Seleccionaste un número de atención para:</h3>
+          <div class="linea_roja"></div>
+        </div>
+        <div class="Select_numero"><h3>Caja Cliente Santander</h3></div>
+        <div class="numero_container">
+          <div class="instruccion_numero">
+            <h4>Obtén tu número, te avisaremos cuando sea tu turno.</h4>
+          </div>
+          <div class="numero"><h1>A65</h1></div>
+        </div>
+        <div class="info_tiempos_container">
+          <div class="infoNumero">
+            <p>Usuarios en Fila:</p>
+            <img class="ico_verde" src="../imgs/icono_usuario.svg" alt="" />
+            <h4>21</h4>
+          </div>
+          <div class="linegris"></div>
+          <div class="infoNumero">
+            <p>Tiempo de espera:</p>
+            <img class="ico_verde" src="../imgs/icono_reloj.svg" alt="" />
+            <h4>18 MIN.</h4>
+          </div>
+        </div>
+        <div class="bt_container">
+          <a class="boton" href="llamados.html">
+            <div class="red_bt">Ver llamados</div></a
+          >
+      </div>
+      <div class="promo_container">
+        <div class="img_promo"><img src="../imgs/icono sms.png" alt="mas lucas"></div>
+        <div class="side_promo">
+          <h4>¿Quieres que te avisemos antes de tu turno vía SMS?</h4>
+          <a class="boton" href="numero_movil.html">
+            <div class="red_bt bt_margin">Click aquí</div></a
+          >
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -211,7 +211,11 @@ body {
   margin-bottom: 2.5rem;
 }
 
-
+.boton{
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+}
 
  .red_bt{
   width: 100%;
@@ -225,6 +229,15 @@ body {
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   outline: 0;
+  color: var(--color-blanco);
+  font-style: normal;
+  text-decoration: none;
+  outline: 0;
+ }
+
+ .red_bt:hover{
+  background-color: var(--color-gris_txt);
+  border-color: var(--color-gris_oscuro);
  }
 
  .red_bt a{
@@ -233,12 +246,6 @@ body {
   text-decoration: none;
   padding: 1.3rem 2rem;
   outline: 0;
- }
-
- .dis{
-  background-color: var(--color-gris_txt);
-   border-color: var(--color-gris_oscuro);
-
  }
 
  .whithe_bt{
@@ -252,13 +259,23 @@ body {
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   outline: 0;
+  color: var(--color-rojo_santander);
+  font-style: normal;
+  text-decoration: none;
  }
+.whithe_bt:hover{
+  background-color: var(--color-gris_txt);
+  border-color: var(--color-gris_txt);
+  text-decoration: none;
+  outline: 0;
+
+}
+
 
  .whithe_bt a{
   color: var(--color-rojo_santander);
   font-style: normal;
   text-decoration: none;
-  padding: 1.3rem 2rem;
   outline: 0;
  }
 
@@ -657,7 +674,18 @@ color: var(--color-gris_oscuro);}
   }
 
   .bt_verde{
-    margin-bottom: 4rem;
+    width:max(80%);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .boton_seguridad{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
   }
 
 }
