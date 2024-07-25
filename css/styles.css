@@ -663,6 +663,14 @@ color: var(--color-gris_oscuro);}
   padding: 1rem;
 }
 
+.boton_seguridad{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+}
+
 @media(min-width:1024px){
 
   .aviso_seguridad p{
