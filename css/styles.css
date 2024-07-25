@@ -689,3 +689,13 @@ color: var(--color-gris_oscuro);}
   }
 
 }
+
+/*numero móvil*/
+
+.boton_movil{
+  width:max(40%);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+}
