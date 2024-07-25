@@ -701,9 +701,16 @@ color: var(--color-gris_oscuro);}
 /*numero móvil*/
 
 .boton_movil{
-  width:max(40%);
+  width:100%;
   display: flex;
   justify-content: center;
   text-align: center;
   text-decoration: none;
+}
+
+@media(min-width:1024px){
+  .boton_movil{
+    width:max(40%);
+
+  }
 }
